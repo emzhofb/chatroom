@@ -24,7 +24,11 @@ exports.joinChatroom = async (req, res, next) => {
       await user.save();
       res.status(200).json({
         success: true,
-        message: 'Success join chatroom'
+        message: 'Success join chatroom',
+        cata: {
+          username,
+          roomId
+        }
       });
     } catch (error) {
       res.status(400).json({

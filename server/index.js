@@ -21,5 +21,7 @@ mongoose
 
 const userRouter = require('./routes/user');
 app.use('/api/v1/user', userRouter);
+const chatRouter = require('./routes/chat');
+app.use('/api/v1/chat', chatRouter);
 
 app.listen(5000, () => console.log("Server running on 5000"));
